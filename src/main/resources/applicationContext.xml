@@ -5,6 +5,10 @@
            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
+    <!-- creating object for engine class using default constructor -->
+    <bean id = "engine" class="com.blab.entity.Engine"/>
     <!-- creating object for car class using default constructor or zero parameter constructor  -->
-    <bean id="car" class="com.blab.entity.Car" />
+    <bean id="car" class="com.blab.entity.Car" >
+        <constructor-arg ref="engine"/>
+    </bean>
 </beans>
