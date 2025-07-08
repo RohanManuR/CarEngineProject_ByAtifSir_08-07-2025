@@ -1,4 +1,4 @@
-package com.blab.main;
+package com.blab.entity;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
