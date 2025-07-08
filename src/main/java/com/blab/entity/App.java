@@ -9,9 +9,10 @@ public class App
 
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         Garage garage = (Garage)context.getBean("garage");
-        for(Car car : garage.getCars())
-        {
+        for(Car car : garage.getCars()) {
             car.start();
         }
+
+
     }
 }
