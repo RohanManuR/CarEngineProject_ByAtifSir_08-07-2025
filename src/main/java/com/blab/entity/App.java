@@ -8,7 +8,10 @@ public class App
     public static void main(String[] args) {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        Car car = (Car)context.getBean("car");
-        car.start();
+        Garage garage = (Garage)context.getBean("garage");
+        for(Car car : garage.getCars())
+        {
+            car.start();
+        }
     }
 }

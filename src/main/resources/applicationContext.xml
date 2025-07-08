@@ -7,10 +7,34 @@
     <!-- creating object for engine class using default constructor -->
     <bean id = "engine" class="com.blab.entity.Engine"/>
     <!-- creating object for car class using default constructor or zero parameter constructor  -->
-    <bean id="car" class="com.blab.entity.Car" >
+    <bean id="car1" class="com.blab.entity.Car" >
         <!--  passing value to private variable model by using setter method -->
         <property name="model" value="Tesla"/>
         <!--  passing engine object by using setter method(setter injector)  -->
         <property name="engine" ref="engine"/>
     </bean>
+    <!-- creating object for car class using default constructor or zero parameter constructor  -->
+    <bean id="car2" class="com.blab.entity.Car" >
+        <!--  passing value to private variable model by using setter method -->
+        <property name="model" value="benz"/>
+        <!--  passing engine object by using setter method(setter injector)  -->
+        <property name="engine" ref="engine"/>
+    </bean>
+    <!-- creating object for car class using default constructor or zero parameter constructor  -->
+    <bean id="car3" class="com.blab.entity.Car" >
+        <!--  passing value to private variable model by using setter method -->
+        <property name="model" value="audi"/>
+        <!--  passing engine object by using setter method(setter injector)  -->
+        <property name="engine" ref="engine"/>
+    </bean>
+    <bean id="garage" class="com.blab.entity.Garage">
+        <property name="cars">
+            <list>
+                <ref bean="car1"/>
+                <ref bean="car2"/>
+                <ref bean="car3"/>
+            </list>
+        </property>
+    </bean>
+
 </beans>
